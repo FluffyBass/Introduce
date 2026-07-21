@@ -21,7 +21,7 @@
 
 /* 콜라주가 오른쪽 */
 .int-row--right {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 /* ══════════════════════════════════════
@@ -42,7 +42,7 @@
 }
 
 .int-card--left {
-  text-align: left;
+  text-align: center;
   align-items: flex-start;
 }
 
@@ -110,7 +110,7 @@
 /* 좌상단 */
 .int-photo--tl {
   left: 0;
-  top: 0;
+  top: 10;
   width: 56%;
   height: 50%;
   z-index: 1;
@@ -119,7 +119,7 @@
 /* 우상단 */
 .int-photo--tr {
   right: 0;
-  top: 10px;
+  top: 40px;
   width: 46%;
   height: 44%;
   z-index: 2;
@@ -146,6 +146,7 @@
    반응형
    ══════════════════════════════════════ */
 @media (max-width: 700px) {
+
   .int-row,
   .int-row--right,
   .int-row--left {
