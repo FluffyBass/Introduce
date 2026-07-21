@@ -36,10 +36,12 @@ body.subpage-body {
   background: linear-gradient(var(--design-bg, var(--page-bg)) 55%, transparent);
   pointer-events: none;
 }
+
 .subpage-nav a,
 .subpage-nav span {
   pointer-events: auto;
 }
+
 .subpage-logo {
   font-weight: 800;
   font-size: 15px;
@@ -47,9 +49,11 @@ body.subpage-body {
   color: var(--ink);
   text-decoration: none;
 }
+
 .subpage-logo::after {
   content: ".";
 }
+
 .subpage-crumb {
   font-size: 11px;
   letter-spacing: 1.5px;
@@ -75,6 +79,7 @@ body.subpage-body {
   color: rgba(5, 5, 5, 0.5);
   margin: 0 0 6px;
 }
+
 .subpage-title {
   margin: 0;
   font-size: clamp(24px, 3vw, 34px);
@@ -88,16 +93,14 @@ body.subpage-body {
   border-radius: 10px;
   padding: 26px 30px;
   margin-bottom: 24px;
-  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
-    var(--shadow-color, rgba(15, 24, 38, 0.16));
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px) var(--shadow-color, rgba(15, 24, 38, 0.16));
 }
 
 /* placeholder for a photo not yet supplied */
 .placeholder-photo {
   background: var(--box, #adadad);
   border: 1.5px solid rgba(15, 24, 38, 0.24);
-  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
-    var(--shadow-color, rgba(15, 24, 38, 0.16));
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px) var(--shadow-color, rgba(15, 24, 38, 0.16));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,11 +110,13 @@ body.subpage-body {
   color: #2b2b2b;
   flex-shrink: 0;
 }
+
 .placeholder-photo svg {
   width: 30px;
   height: 30px;
   opacity: 0.55;
 }
+
 .placeholder-photo span {
   font-size: 12px;
   line-height: 1.5;
@@ -125,9 +130,11 @@ body.subpage-body {
   width: 150px;
   height: 150px;
 }
+
 .photo-collage .placeholder-photo {
   position: absolute;
 }
+
 .photo-collage .collage-back {
   left: 0;
   top: 20%;
@@ -135,6 +142,7 @@ body.subpage-body {
   height: 80%;
   z-index: 1;
 }
+
 .photo-collage .collage-front {
   right: 0;
   top: 0;
@@ -149,9 +157,11 @@ body.subpage-body {
   gap: 22px;
   align-items: stretch;
 }
+
 .info-row.reverse {
   flex-direction: row-reverse;
 }
+
 .info-row .content-card {
   flex: 1;
   display: flex;
@@ -159,11 +169,13 @@ body.subpage-body {
   justify-content: center;
   gap: 8px;
 }
+
 .info-row-title {
   font-size: 18px;
   font-weight: 800;
   color: var(--ink);
 }
+
 .info-row-text {
   margin: 0;
   font-size: 13.5px;
@@ -179,6 +191,7 @@ body.subpage-body {
   padding: 36px 40px;
   text-align: center;
 }
+
 .quote-card p {
   margin: 0;
   font-weight: 900;
@@ -192,11 +205,13 @@ body.subpage-body {
   line-height: var(--text-regular-leading, 1.6);
   font-weight: 400;
 }
+
 .text-emphasis {
   font-size: var(--text-emphasis-size, 22px);
   line-height: var(--text-emphasis-leading, 1.4);
   font-weight: 700;
 }
+
 .text-subject {
   font-size: var(--text-subject-size, 34px);
   line-height: var(--text-subject-leading, 1.15);
@@ -209,11 +224,13 @@ body.subpage-body {
   height: 200px;
   object-fit: cover;
 }
+
 .img-medium {
   width: 300px;
   height: 300px;
   object-fit: cover;
 }
+
 .img-large {
   width: 600px;
   height: 400px;
@@ -227,18 +244,21 @@ body.subpage-body {
   min-height: 300px;
   border-radius: 10px;
 }
+
 .box-sub {
   width: 100%;
   max-width: 700px;
   min-height: 250px;
   border-radius: 10px;
 }
+
 .box-medium {
   width: 100%;
   max-width: 700px;
   min-height: 200px;
   border-radius: 10px;
 }
+
 .box-link {
   width: 100%;
   max-width: 700px;
@@ -254,14 +274,17 @@ body.subpage-body {
   justify-content: center;
   text-align: center;
 }
+
 .stub-panel .content-card {
   max-width: 420px;
 }
+
 .stub-panel h2 {
   margin: 0 0 8px;
   font-size: 22px;
   font-weight: 800;
 }
+
 .stub-panel p {
   margin: 0;
   font-size: 14px;
@@ -282,17 +305,21 @@ body.subpage-body {
   .subpage-page {
     padding: 90px 24px 260px;
   }
+
   .subpage-container {
     padding-right: 0;
   }
+
   .info-row,
   .info-row.reverse {
     flex-direction: column;
   }
+
   .photo-collage {
     width: 100%;
     height: 140px;
   }
+
   .subpage-page .wheel-wrap {
     position: fixed;
     top: auto;
