@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interests — 김승원</title>
+    <link rel="stylesheet" href="Styles/Default_styles.css" />
+    <link rel="stylesheet" href="Styles/wheel-menu.css" />
+    <link rel="stylesheet" href="Styles/subpage.css" />
+    <link rel="stylesheet" href="Styles/interests.css" />
+    <script src="Scripts/wheel-menu.js" defer></script>
+  </head>
+  <body class="subpage-body">
+    <nav class="subpage-nav">
+      <a class="subpage-logo" href="index.html">KSW</a>
+      <span class="subpage-crumb">Interests</span>
+    </nav>
+
+    <main class="subpage-page interests-page">
+      <nav class="wheel-wrap" data-wheel-menu data-active="Interests" aria-label="주요 메뉴">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"></svg>
+      </nav>
+
+      <div class="subpage-container interests-container">
+
+        <!-- 1. 게임: 콜라주 3장(좌) + 카드(우), 텍스트 중앙정렬 -->
+        <div class="int-row int-row--left">
+          <div class="int-collage int-collage--3">
+            <img src="Images/BF1.jpg"       alt="배틀필드 1"        class="int-photo int-photo--tl" />
+            <img src="Images/Enlisted.jpg"  alt="인리스티드"         class="int-photo int-photo--tr" />
+            <img src="Images/HOI4.jpg"      alt="Hearts of Iron IV" class="int-photo int-photo--bl" />
+          </div>
+          <div class="content-card int-card int-card--center">
+            <h2 class="int-title">게임</h2>
+            <p class="int-text">인리스티드 등의 온라인 FPS 게임 외에도<br />하츠 오브 아이언 등의 비디오 게임 등등의 많은 분야의<br />게임을 합니다</p>
+          </div>
+        </div>
+
+        <!-- 2. 맛있는 음식: 카드(좌, 텍스트 좌정렬) + 콜라주(우) -->
+        <div class="int-row int-row--right">
+          <div class="content-card int-card int-card--left">
+            <h2 class="int-title">맛있는 음식 먹기</h2>
+            <p class="int-text">맛있는 음식을 먹는것은 제 아주 오래된 취미중 하나 입니다.<br />아주 다양한 종류의 음식의 맛을 보는것은 제게 큰 행복입니다.</p>
+          </div>
+          <div class="int-collage int-collage--3">
+            <img src="Images/food.jpg"  alt="음식 1" class="int-photo int-photo--tl" />
+            <img src="Images/food2.jpg" alt="음식 2" class="int-photo int-photo--tr" />
+            <img src="Images/food3.jpg" alt="음식 3" class="int-photo int-photo--bl" />
+          </div>
+        </div>
+
+        <!-- 3. 새로운 지식: 콜라주(좌, 3장) + 카드(우), 텍스트 중앙정렬 -->
+        <div class="int-row int-row--left">
+          <div class="int-collage int-collage--3">
+            <img src="Images/Small IMGbox1.jpg" alt="지식 1" class="int-photo int-photo--tl" />
+            <img src="Images/Small IMGbox2.jpg" alt="지식 2" class="int-photo int-photo--tr" />
+            <img src="Images/Small IMGbox3.jpg" alt="지식 3" class="int-photo int-photo--bl" />
+          </div>
+          <div class="content-card int-card int-card--center">
+            <h2 class="int-title">새로운 지식 습득하기</h2>
+            <p class="int-text">늘 새로운 지식과 새로운 기술들을 습득하려고 노력합니다.<br />최근 국제 논문, 국제 기술흐름들과 트렌드를 자주 접합니다.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

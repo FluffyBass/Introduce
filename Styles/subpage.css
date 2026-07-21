@@ -1,0 +1,305 @@
+/* ============================================================
+   subpage.css — shared foundation for every content page
+   (About / Interests / Future / Portfolio / Links).
+
+   Load order on a subpage:
+     Default_styles.css  -> global tokens + hero page
+     wheel-menu.css       -> the wheel nav component
+     subpage.css           -> THIS file: shared subpage layout
+     [page].css (optional)-> page-specific tweaks (e.g. about.css)
+   ============================================================ */
+
+body.subpage-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--design-bg, var(--page-bg));
+}
+
+.subpage-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 110px max(6vw, 40px) 140px;
+  display: block;
+}
+
+/* sticky top bar: site logo + current page name */
+.subpage-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px max(6vw, 40px);
+  z-index: 30;
+  background: linear-gradient(var(--design-bg, var(--page-bg)) 55%, transparent);
+  pointer-events: none;
+}
+.subpage-nav a,
+.subpage-nav span {
+  pointer-events: auto;
+}
+.subpage-logo {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.subpage-logo::after {
+  content: ".";
+}
+.subpage-crumb {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(5, 5, 5, 0.5);
+}
+
+/* main content column: leaves room on the right for the fixed wheel */
+.subpage-container {
+  width: min(860px, 94%);
+  margin: 0 auto;
+  padding-right: min(160px, 12vw);
+  display: flex;
+  flex-direction: column;
+  gap: var(--wide-gap, 56px);
+}
+
+.subpage-eyebrow {
+  font-weight: 800;
+  font-size: 12.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(5, 5, 5, 0.5);
+  margin: 0 0 6px;
+}
+.subpage-title {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* generic white content card */
+.content-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 26px 30px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
+    var(--shadow-color, rgba(15, 24, 38, 0.16));
+}
+
+/* placeholder for a photo not yet supplied */
+.placeholder-photo {
+  background: var(--box, #adadad);
+  border: 1.5px solid rgba(15, 24, 38, 0.24);
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
+    var(--shadow-color, rgba(15, 24, 38, 0.16));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  color: #2b2b2b;
+  flex-shrink: 0;
+}
+.placeholder-photo svg {
+  width: 30px;
+  height: 30px;
+  opacity: 0.55;
+}
+.placeholder-photo span {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+/* two-photo overlapping collage, used by interest cards etc. */
+.photo-collage {
+  position: relative;
+  flex: 0 0 150px;
+  width: 150px;
+  height: 150px;
+}
+.photo-collage .placeholder-photo {
+  position: absolute;
+}
+.photo-collage .collage-back {
+  left: 0;
+  top: 20%;
+  width: 78%;
+  height: 80%;
+  z-index: 1;
+}
+.photo-collage .collage-front {
+  right: 0;
+  top: 0;
+  width: 56%;
+  height: 56%;
+  z-index: 2;
+}
+
+/* a row pairing a photo (placeholder or collage) with a text card */
+.info-row {
+  display: flex;
+  gap: 22px;
+  align-items: stretch;
+}
+.info-row.reverse {
+  flex-direction: row-reverse;
+}
+.info-row .content-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.info-row-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.info-row-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.75;
+  color: rgba(5, 5, 5, 0.65);
+}
+
+/* a wide, emphasized quote banner */
+.quote-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(15, 24, 38, 0.18);
+  padding: 36px 40px;
+  text-align: center;
+}
+.quote-card p {
+  margin: 0;
+  font-weight: 900;
+  font-size: var(--text-emphasis-size, 32px);
+  line-height: var(--text-emphasis-leading, 1.4);
+}
+
+/* typography scale (design spec) */
+.text-regular {
+  font-size: var(--text-regular-size, 16px);
+  line-height: var(--text-regular-leading, 1.6);
+  font-weight: 400;
+}
+.text-emphasis {
+  font-size: var(--text-emphasis-size, 22px);
+  line-height: var(--text-emphasis-leading, 1.4);
+  font-weight: 700;
+}
+.text-subject {
+  font-size: var(--text-subject-size, 34px);
+  line-height: var(--text-subject-leading, 1.15);
+  font-weight: 900;
+}
+
+/* image size utilities (design spec) */
+.img-small {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.img-medium {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.img-large {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* textbox size utilities (design spec) */
+.box-main {
+  width: 100%;
+  max-width: 700px;
+  min-height: 300px;
+  border-radius: 10px;
+}
+.box-sub {
+  width: 100%;
+  max-width: 700px;
+  min-height: 250px;
+  border-radius: 10px;
+}
+.box-medium {
+  width: 100%;
+  max-width: 700px;
+  min-height: 200px;
+  border-radius: 10px;
+}
+.box-link {
+  width: 100%;
+  max-width: 700px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+
+/* "coming soon" placeholder used by pages not designed yet */
+.stub-panel {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.stub-panel .content-card {
+  max-width: 420px;
+}
+.stub-panel h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.stub-panel p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(5, 5, 5, 0.6);
+}
+
+/* wheel fixed to the right edge, always visible while scrolling */
+.subpage-page .wheel-wrap {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 40;
+}
+
+@media (max-width: 900px) {
+  .subpage-page {
+    padding: 90px 24px 260px;
+  }
+  .subpage-container {
+    padding-right: 0;
+  }
+  .info-row,
+  .info-row.reverse {
+    flex-direction: column;
+  }
+  .photo-collage {
+    width: 100%;
+    height: 140px;
+  }
+  .subpage-page .wheel-wrap {
+    position: fixed;
+    top: auto;
+    bottom: 4px;
+    right: -26%;
+    transform: none;
+    width: min(360px, 70vw);
+    opacity: 0.92;
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — 김승원</title>
+    <link rel="stylesheet" href="Styles/Default_styles.css" />
+    <link rel="stylesheet" href="Styles/wheel-menu.css" />
+    <link rel="stylesheet" href="Styles/subpage.css" />
+    <link rel="stylesheet" href="Styles/about.css" />
+    <script src="Scripts/wheel-menu.js" defer></script>
+  </head>
+  <body class="subpage-body about-body">
+    <nav class="subpage-nav">
+      <a class="subpage-logo" href="index.html">KSW</a>
+      <span class="subpage-crumb">About</span>
+    </nav>
+
+    <main class="subpage-page about-page">
+      <nav class="wheel-wrap" data-wheel-menu data-active="About" aria-label="주요 메뉴">
+        <svg viewBox="0 0 520 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"></svg>
+      </nav>
+
+      <div class="about-zigzag">
+
+        <!-- 블록 1: 사진 + 자기소개 (좌측 기준) -->
+        <div class="zz-block zz-block--1">
+          <div class="placeholder-photo about-photo-hero" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M4 20c1.8-4.2 5-6 8-6s6.2 1.8 8 6"/></svg>
+            <span>이 박스는<br />본인의 사진을<br />첨부할 예정</span>
+          </div>
+          <div class="content-card zz-card">
+            <h1 class="zz-title">안녕하세요,<br />김승원입니다.</h1>
+            <p class="zz-text">사용자의 입장에서 한 번 더 생각하는 걸 좋아하는 주니어 웹 개발자입니다. 새로운 것을 배우는 과정을 즐기고, 작은 디테일 하나가 전체 경험을 바꿀 수 있다고 믿습니다. 무언가를 끝까지 파고드는 성격 덕분에 막힌 문제도 결국엔 풀어내는 편입니다.</p>
+          </div>
+        </div>
+
+        <!-- 블록 2: Good & Bad (우측으로 shift) -->
+        <div class="zz-block zz-block--2">
+          <div class="content-card zz-card about-traits">
+            <div class="trait-row">
+              <span class="trait-tag good">Good</span>
+              <p>맛있는 음식, 편안한 분위기, 조용한 분위기, 혼자 있는 것, 탐구하고 공부하는 것, 새로운 걸 알아가는 것</p>
+            </div>
+            <div class="trait-row">
+              <span class="trait-tag bad">Bad</span>
+              <p>시끄러운 것, 놀리는 것, 남을 깔보는 것, 남의 생각을 무시하는 것, 전의 실수를 계속 놀리는 것</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 블록 3: 인생 모토 카드 (사진 없음) -->
+        <div class="zz-block zz-block--3">
+          <div class="content-card zz-card zz-motto-card">
+            <p class="zz-motto">"실패를<br />두려워하지 말라"</p>
+          </div>
+        </div>
+
+        <!-- 블록 4: 욘 라베 설명 카드 + 사진 (우측으로 shift, 사진이 카드 옆에) -->
+        <div class="zz-block zz-block--4">
+          <img
+            src="Images/john_rabe.png"
+            alt="욘 라베 (John Rabe)"
+            class="mentor-img mentor-img--rabe"
+          />
+          <div class="content-card zz-card">
+            <p class="mentor-name-label">욘 라베 (John Rabe)</p>
+            <p class="zz-text">난징 학살 당시 수천 명의 중국인을 보호한 독일 기업인. 자신의 안위보다 타인의 생명을 선택한 용기는, 내가 실패를 두려워하지 않는 이유가 됩니다.</p>
+          </div>
+        </div>
+
+
+        <!-- 블록 5: 조지 패튼 카드 + 사진 (좌측으로 돌아와서 패튼 사진은 우측 아래 오프셋) -->
+        <div class="zz-block zz-block--5">
+          <div class="content-card zz-card">
+            <p class="mentor-name-label">조지 패튼 (George Patton)</p>
+            <p class="zz-motto">"공포와는 타협하지 말라,<br />아니 상의조차도 하지 말라."</p>
+            <p class="zz-text">제2차 세계대전의 명장. 두려움 앞에서 물러서지 않는 그의 태도는 내가 어려운 상황에서도 정면 돌파를 택하게 합니다.</p>
+          </div>
+          <img
+            src="Images/george_patton.png"
+            alt="조지 패튼 (George Patton)"
+            class="mentor-img mentor-img--patton"
+          />
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>

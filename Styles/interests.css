@@ -1,0 +1,167 @@
+/* interests.css — Interests 페이지 전용 스타일 */
+
+/* ══════════════════════════════════════
+   레이아웃 컨테이너
+   ══════════════════════════════════════ */
+.interests-container {
+  gap: 48px;
+}
+
+/* 각 관심사 행 */
+.int-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* 콜라주가 왼쪽 */
+.int-row--left {
+  flex-direction: row;
+}
+
+/* 콜라주가 오른쪽 */
+.int-row--right {
+  flex-direction: row-reverse;
+}
+
+/* ══════════════════════════════════════
+   카드
+   ══════════════════════════════════════ */
+.int-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* content-card margin-bottom 제거 */
+  margin-bottom: 0;
+}
+
+.int-card--center {
+  text-align: center;
+  align-items: center;
+}
+
+.int-card--left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.int-title {
+  margin: 0;
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.int-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(5, 5, 5, 0.65);
+}
+
+/* ══════════════════════════════════════
+   사진 콜라주 — 2장 겹침
+   ══════════════════════════════════════ */
+.int-collage {
+  position: relative;
+  flex: 0 0 200px;
+  width: 200px;
+  height: 220px;
+}
+
+/* 콜라주 공통 사진 */
+.int-photo {
+  position: absolute;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1.5px solid rgba(15, 24, 38, 0.22);
+  box-shadow: 8px 10px 18px rgba(15, 24, 38, 0.18);
+}
+
+/* 2장 콜라주 — 뒷 장 (큰 것, 왼쪽 아래) */
+.int-photo--back {
+  left: 0;
+  top: 30px;
+  width: 62%;
+  height: 72%;
+  z-index: 1;
+}
+
+/* 2장 콜라주 — 앞 장 (작은 것, 오른쪽 위) */
+.int-photo--front {
+  right: 0;
+  top: 0;
+  width: 52%;
+  height: 56%;
+  z-index: 2;
+}
+
+/* ══════════════════════════════════════
+   3장 콜라주 레이아웃
+   ══════════════════════════════════════ */
+.int-collage--3 {
+  height: 230px;
+  flex: 0 0 210px;
+  width: 210px;
+}
+
+/* 좌상단 */
+.int-photo--tl {
+  left: 0;
+  top: 0;
+  width: 56%;
+  height: 50%;
+  z-index: 1;
+}
+
+/* 우상단 */
+.int-photo--tr {
+  right: 0;
+  top: 10px;
+  width: 46%;
+  height: 44%;
+  z-index: 2;
+}
+
+/* 좌하단 */
+.int-photo--bl {
+  left: 16px;
+  bottom: 0;
+  width: 58%;
+  height: 48%;
+  z-index: 3;
+}
+
+/* placeholder를 int-photo에 맞게 재정의 */
+.int-photo.placeholder-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--box, #adadad);
+}
+
+/* ══════════════════════════════════════
+   반응형
+   ══════════════════════════════════════ */
+@media (max-width: 700px) {
+  .int-row,
+  .int-row--right,
+  .int-row--left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .int-collage,
+  .int-collage--3 {
+    width: 100%;
+    flex: none;
+    height: 180px;
+  }
+
+  .int-card--center {
+    text-align: left;
+    align-items: flex-start;
+  }
+}

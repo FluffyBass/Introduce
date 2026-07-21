@@ -1,0 +1,99 @@
+/* Reusable semicircular wheel menu. Override .wheel-wrap placement per page as needed. */
+.wheel-wrap {
+  --wheel-fill: #d2d2d2;
+  --wheel-divider: #a9bbd0;
+  --wheel-hover: #9fb4ce;
+  --wheel-label: #454545;
+  --wheel-active: #050505;
+  --wheel-base-width: 360px;
+  --wheel-base-height: 520px;
+  --wheel-base-font: 25px;
+  --wheel-base-active-font: 31px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin: 0;
+  width: min(420px, 36vw);
+  aspect-ratio: var(--wheel-base-width) / var(--wheel-base-height);
+  transform: translateY(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.wheel-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  pointer-events: auto;
+  filter: drop-shadow(-8px 10px 8px rgba(42, 61, 85, 0.28));
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+.wheel-wrap.wheel-transitioning svg {
+  animation: wheel-spin 0.52s ease-in-out forwards;
+}
+
+@keyframes wheel-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wheel-wrap a {
+  text-decoration: none;
+}
+
+.wedge-group {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+  pointer-events: auto;
+}
+
+.wedge-path {
+  fill: var(--wheel-fill);
+  stroke: var(--wheel-divider);
+  stroke-width: 1.2px;
+  transition: fill 0.2s ease;
+}
+
+.wedge-path-active {
+  fill: #c6d3e5;
+}
+
+.wedge-group:hover .wedge-path,
+.wedge-group:focus-within .wedge-path {
+  fill: var(--wheel-hover);
+}
+
+.wheel-divider {
+  stroke: var(--wheel-divider);
+  stroke-width: 1px;
+  pointer-events: none;
+}
+
+.wedge-label {
+  font-family: "IBM Plex Sans KR", Arial, sans-serif;
+  font-size: calc(var(--wheel-base-font) * (100vw / 1728));
+  font-weight: 600;
+  fill: var(--wheel-label);
+  pointer-events: none;
+}
+
+.wedge-label-active {
+  font-size: calc(var(--wheel-base-active-font) * (100vw / 1728));
+  font-weight: 700;
+  fill: var(--wheel-active);
+}
+
+.wheel-hub {
+  fill: transparent;
+  stroke: none;
+}
