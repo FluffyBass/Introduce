@@ -28,8 +28,11 @@
    카드
    ══════════════════════════════════════ */
 .int-card {
+  width: 50%;
+  height: 30%;
   flex: 1;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 12px;
   /* content-card margin-bottom 제거 */
@@ -37,6 +40,8 @@
 }
 
 .int-card--center {
+  width: 50%;
+  height: 30%;
   text-align: center;
   align-items: center;
 }
@@ -59,6 +64,7 @@
   font-size: 14px;
   line-height: 1.9;
   color: rgba(5, 5, 5, 0.65);
+  text-align: center;
 }
 
 /* ══════════════════════════════════════
@@ -162,7 +168,7 @@
   }
 
   .int-card--center {
-    text-align: left;
-    align-items: flex-start;
+    text-align: center;
+    align-items: center;
   }
 }
