@@ -9,6 +9,12 @@
      [page].css (optional)-> page-specific tweaks (e.g. about.css)
    ============================================================ */
 
+
+:root {
+  --Default--Row--Int: calc(100vw / 1728);
+  --Default--Column--Int: calc(100vw / 1117);
+}
+
 body.subpage-body {
   overflow-x: hidden;
   overflow-y: auto;
@@ -63,9 +69,8 @@ body.subpage-body {
 
 /* main content column: leaves room on the right for the fixed wheel */
 .subpage-container {
-  width: min(860px, 94%);
+  width: 100%;
   margin: 0 auto;
-  padding-right: min(160px, 12vw);
   display: flex;
   flex-direction: column;
   gap: var(--wide-gap, 56px);
@@ -232,8 +237,8 @@ body.subpage-body {
 }
 
 .img-large {
-  width: 600px;
-  height: 400px;
+  width: calc(600 * --Default--Column--Int);
+  height: calc(400 * --Default--Row--Int);
   object-fit: cover;
 }
 

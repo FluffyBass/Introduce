@@ -1,0 +1,101 @@
+/* future.css — page-specific rules on top of subpage.css */
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 220px;
+  gap: var(--base-gap, 32px);
+}
+
+.vision-cell {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vision-cell.content-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vision-cell .subpage-eyebrow {
+  margin-bottom: 10px;
+}
+.vision-cell p.vision-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+/* decorative code block */
+.code-shot {
+  background: #0c1220;
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
+    var(--shadow-color, rgba(15, 24, 38, 0.16));
+  padding: 20px 22px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11.5px;
+  line-height: 1.9;
+  overflow: hidden;
+  white-space: pre;
+}
+.code-shot .kw { color: #ff7ab2; }
+.code-shot .fn { color: #7ecbff; }
+.code-shot .str { color: #ffb454; }
+.code-shot .cm { color: #5b6b8c; }
+.code-shot .pl { color: #e6e6e6; }
+
+/* tech stack panel */
+.tech-stack {
+  background: #10182c;
+  box-shadow: var(--shadow-x, 10px) var(--shadow-y, 12px) var(--shadow-blur, 15px)
+    var(--shadow-color, rgba(15, 24, 38, 0.16));
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  align-items: center;
+  justify-items: center;
+  padding: 22px;
+}
+.tech-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.tech-chip {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+.tech-badge span {
+  font-size: 10.5px;
+  color: #b9c2d6;
+}
+.tech-chip.js { background: #f0db4f; color: #222; }
+.tech-chip.ts { background: #3178c6; color: #fff; }
+.tech-chip.react { background: #16233a; color: #61dafb; border: 1px solid #61dafb; }
+.tech-chip.vue { background: #16233a; color: #42b883; border: 1px solid #42b883; }
+.tech-chip.vuex { background: #16233a; color: #a390e4; border: 1px solid #a390e4; }
+.tech-chip.angular { background: #dd0031; color: #fff; }
+.tech-chip.next { background: #fff; color: #111; }
+
+@media (max-width: 900px) {
+  .vision-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .code-shot,
+  .tech-stack {
+    min-height: 200px;
+  }
+  .tech-stack {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

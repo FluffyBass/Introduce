@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="Styles/Default_styles.css" />
   <link rel="stylesheet" href="Styles/wheel-menu.css" />
   <link rel="stylesheet" href="Styles/subpage.css" />
+  <link rel="stylesheet" href="Styles/future.css" />
   <script src="Scripts/wheel-menu.js" defer></script>
 </head>
 
@@ -27,27 +28,60 @@
         <p class="subpage-eyebrow">Where I'm Headed</p>
         <h1 class="subpage-title">Future</h1>
       </div>
-      <div class="info-row">
-        <div class="stub-panel">
-          <img src="/Images/Large IMGbox.jpg" class="img-large">
+
+      <div class="vision-grid">
+
+        <div class="vision-cell code-shot" aria-hidden="true"><span class="cm">// form validation</span>
+          <span class="kw">function</span> <span class="fn">checkPassword</span>(pw) {
+          <span class="kw">if</span> (pw.length &lt; <span class="pl">8</span>) {
+          <span class="kw">return</span> <span class="str">"Please enter the correct password"</span>
+          }
+          <span class="kw">if</span> (pw !== confirmPw) {
+          <span class="kw">return</span> <span class="str">"Please check the confirmation"</span>
+          }
+          }
+
+          <span class="kw">function</span> <span class="fn">checkUsername</span>(name) {
+          <span class="kw">if</span> (!/^[a-zA-Z]+$/.test(name)) {
+          <span class="kw">return</span> <span class="str">"Letters only for username"</span>
+          }
+          }
         </div>
-        <div class="stub-panel">
-          <div class="content-card">
-            <h2>준비 중입니다</h2>
-            <p>이 페이지는 아직 와이어프레임이 없어요. 디자인을 공유해주면 다른 페이지와 같은 스타일로 이어서 만들게요.</p>
+
+        <div class="vision-cell content-card">
+          <p class="subpage-eyebrow">Vision 1</p>
+          <p class="vision-text">사용자의 입력값 하나까지 꼼꼼하게 검증하고, 예외 상황까지 고려하는&nbsp;— 기본기가 탄탄한 개발자가 되고 싶습니다.</p>
+        </div>
+
+        <div class="vision-cell content-card">
+          <p class="subpage-eyebrow">Vision 2</p>
+          <p class="vision-text">여러 프레임워크와 라이브러리를 넘나들며, 상황에 맞는 최적의 도구를 선택할 수 있는 개발자로 성장하고 싶습니다.</p>
+        </div>
+
+        <div class="vision-cell tech-stack" aria-hidden="true">
+          <div class="tech-badge">
+            <div class="tech-chip js">JS</div><span>JavaScript</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip react">⚛</div><span>React</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip vuex">Vx</div><span>Vuex</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip next">N</div><span>Next.js</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip ts">TS</div><span>TypeScript</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip vue">V</div><span>Vue</span>
+          </div>
+          <div class="tech-badge">
+            <div class="tech-chip angular">A</div><span>Angular</span>
           </div>
         </div>
-      </div>
-      <div class="info-row reverse">
-        <div class="stub-panel">
-          <img src="/Images/Large IMGbox.jpg" class="img-large">
-        </div>
-        <div class="stub-panel">
-          <div class="content-card">
-            <h2>준비 중입니다</h2>
-            <p>이 페이지는 아직 와이어프레임이 없어요. 디자인을 공유해주면 다른 페이지와 같은 스타일로 이어서 만들게요.</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </main>
