@@ -38,12 +38,12 @@
         activeIndex < 0
           ? [...defaultSections]
           : defaultSections.map(
-              (_, index) =>
-                defaultSections[
-                  (index + activeIndex - 2 + defaultSections.length) %
-                    defaultSections.length
-                ],
-            );
+            (_, index) =>
+              defaultSections[
+              (index + activeIndex - 2 + defaultSections.length) %
+              defaultSections.length
+              ],
+          );
 
       // 5개 섹션을 2회 반복하여 360도 전체 10개 슬롯으로 배치
       const sections = [...baseSections, ...baseSections];
