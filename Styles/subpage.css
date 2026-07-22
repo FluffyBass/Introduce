@@ -310,13 +310,39 @@ body.subpage-body {
   z-index: 40;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  :root {
+    --text-regular-size: 15px;
+    --text-emphasis-size: 25px;
+    --text-subject-size: 40px;
+  }
+
   .subpage-page {
-    padding: 90px 24px 260px;
+    padding: 85px 20px 260px;
   }
 
   .subpage-container {
     padding-right: 0;
+  }
+
+  .subpage-title {
+    font-size: 40px; /* 모바일 주제 글씨체 40px */
+  }
+
+  .subpage-eyebrow {
+    font-size: 15px; /* 모바일 일반 글씨체 15px */
+  }
+
+  .info-row-title,
+  .zz-motto,
+  .int-title {
+    font-size: 25px; /* 모바일 강조 글씨체 25px */
+  }
+
+  .info-row-text,
+  .zz-text,
+  .int-text {
+    font-size: 15px; /* 모바일 일반 글씨체 15px */
   }
 
   .info-row,
@@ -329,13 +355,15 @@ body.subpage-body {
     height: 140px;
   }
 
+  /* 모바일 화면 하단 중앙 고정 휠 */
   .subpage-page .wheel-wrap {
     position: fixed;
     top: auto;
-    bottom: 4px;
-    right: -26%;
-    transform: none;
-    width: min(360px, 70vw);
-    opacity: 0.92;
+    bottom: 10px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) rotate(90deg);
+    width: min(360px, 88vw);
+    z-index: 100;
   }
 }

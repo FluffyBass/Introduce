@@ -33,17 +33,10 @@
   transform-origin: center center;
 }
 
-.wheel-wrap.wheel-transitioning svg {
-  animation: wheel-spin 0.52s ease-in-out forwards;
-}
-
-@keyframes wheel-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wheel-disc {
+  transform-box: view-box;
+  transform-origin: 520px 260px;
+  transition: transform 0.42s cubic-bezier(0.34, 1.25, 0.64, 1);
 }
 
 .wheel-wrap a {
@@ -85,6 +78,7 @@
   font-weight: 600;
   fill: var(--wheel-label);
   pointer-events: none;
+  transition: fill 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
 }
 
 .wedge-label-active {
@@ -96,4 +90,26 @@
 .wheel-hub {
   fill: transparent;
   stroke: none;
+}
+
+@media (max-width: 768px) {
+  .wheel-wrap {
+    position: fixed;
+    top: auto;
+    bottom: 10px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) rotate(90deg);
+    width: min(360px, 88vw);
+    aspect-ratio: var(--wheel-base-width) / var(--wheel-base-height);
+    z-index: 100;
+  }
+
+  .wedge-label {
+    font-size: 15px; /* 모바일 일반 글씨체 15px */
+  }
+
+  .wedge-label-active {
+    font-size: 25px; /* 모바일 강조 글씨체 25px */
+  }
 }
