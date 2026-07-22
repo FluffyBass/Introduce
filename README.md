@@ -22,7 +22,8 @@
 - 직접 수정/개선한 내용: 휠의 디자인을 재구성 했고, 모바일에서도 휠을 사용 가능하도록 직접 수정함.
 
 ## 주요 화면 및 구현 내용
-<img width="400" height="225" alt="Image" src="https://github.com/user-attachments/assets/5f65f205-6a64-45d1-b073-62daf39d5dae" />
+<img width="600" height="336" alt="Image" src="https://github.com/user-attachments/assets/5f65f205-6a64-45d1-b073-62daf39d5dae" />
+
  - index: 메인 화면으로, 휠의 구성 버튼을 누르면 애니메이션과 함꼐 화면이 전환됨. 또한 모바일에서 휠은 화면 최하단에 고정됨. 시간이 되는대로 사진을 촬영하여 이미지 박스에 추가할 예정.
  - About: 자기소개/좋아하는것과 싫어하는것/ 인생모토/인생 우상/좋아하는 위인 등을 알려줍니다.
  - Interests: 관심사와 취향을 알려줍니다.
