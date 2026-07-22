@@ -95,8 +95,7 @@
 @media (max-width: 768px) {
   .wheel-wrap {
     position: fixed;
-    top: auto;
-    bottom: 10px;
+    bottom: -1px;
     left: 50%;
     right: auto;
     transform: translateX(-50%) rotate(90deg);
@@ -106,10 +105,12 @@
   }
 
   .wedge-label {
-    font-size: 15px; /* 모바일 일반 글씨체 15px */
+    font-size: 15px;
+    /* 모바일 일반 글씨체 15px */
   }
 
   .wedge-label-active {
-    font-size: 25px; /* 모바일 강조 글씨체 25px */
+    font-size: 25px;
+    /* 모바일 강조 글씨체 25px */
   }
 }
